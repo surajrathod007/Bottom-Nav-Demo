@@ -2,6 +2,9 @@ package com.surajrathod.bottomnavdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -21,6 +24,15 @@ class HomeActivity : AppCompatActivity() {
     private fun setupBottomNavigation() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
+        navController.addOnDestinationChangedListener(object : NavController.OnDestinationChangedListener {
+            override fun onDestinationChanged(
+                controller: NavController,
+                destination: NavDestination,
+                arguments: Bundle?
+            ) {
+                Toast.makeText(this@HomeActivity,destination.label,Toast.LENGTH_LONG).show()
+            }
+        })
         binding.bottomHome.setupWithNavController(navController)
     }
 
