@@ -23,4 +23,8 @@ class HomeActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bottomHome.setupWithNavController(navController)
     }
+
+    fun enableBack(){
+
+    }
 }

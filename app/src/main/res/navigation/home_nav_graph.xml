@@ -19,7 +19,11 @@
         android:id="@+id/devicesFragment"
         android:name="com.surajrathod.bottomnavdemo.fragments.DevicesFragment"
         android:label="fragment_devices"
-        tools:layout="@layout/fragment_devices" />
+        tools:layout="@layout/fragment_devices" >
+        <action
+            android:id="@+id/action_devicesFragment_to_deviceDetailsFragment"
+            app:destination="@id/deviceDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.surajrathod.bottomnavdemo.fragments.ProfileFragment"
@@ -30,4 +34,9 @@
         android:name="com.surajrathod.bottomnavdemo.fragments.MoreFragment"
         android:label="fragment_more"
         tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/deviceDetailsFragment"
+        android:name="com.surajrathod.bottomnavdemo.fragments.DeviceDetailsFragment"
+        android:label="fragment_device_details"
+        tools:layout="@layout/fragment_device_details" />
 </navigation>

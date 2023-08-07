@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#051e3e"
-    tools:context=".fragments.DevicesFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:gravity="center"
+    <data>
+
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Devices" />
+        android:background="#051e3e"
+        tools:context=".fragments.DevicesFragment">
 
-</FrameLayout>
+        <!-- TODO: Update blank fragment layout -->
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnDeviceDetails"
+            android:text="Go to device details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+</layout>
