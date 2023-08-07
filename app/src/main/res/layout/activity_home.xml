@@ -7,5 +7,65 @@
     tools:context=".HomeActivity">
 
 
+    <androidx.appcompat.widget.Toolbar
+        android:background="#e6e6ea"
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!-- later use frameViewFor Badges -->
+        <ImageView
+            android:id="@+id/btnNotifications"
+            android:layout_width="36dp"
+            android:layout_height="44dp"
+            android:layout_gravity="left"
+            android:src="@drawable/baseline_notifications_24" />
+
+        <TextView
+            android:id="@+id/txtToolBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Skandika"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/btnUsers"
+            android:layout_width="36dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/sharp_person_4_24" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/home_menu" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarHome"
+        app:navGraph="@navigation/home_nav_graph" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.surajrathod.bottomnavdemo.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/browseFragment"
+        android:name="com.surajrathod.bottomnavdemo.fragments.BrowseFragment"
+        android:label="fragment_browse"
+        tools:layout="@layout/fragment_browse" />
+    <fragment
+        android:id="@+id/devicesFragment"
+        android:name="com.surajrathod.bottomnavdemo.fragments.DevicesFragment"
+        android:label="fragment_devices"
+        tools:layout="@layout/fragment_devices" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.surajrathod.bottomnavdemo.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.surajrathod.bottomnavdemo.fragments.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+</navigation>
