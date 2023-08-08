@@ -47,7 +47,7 @@ class HomeActivity2 : AppCompatActivity() {
         binding.llBottom.forEach {
             if (it is Button) {
                 it.setOnClickListener {
-                    onNavigationDestinationSelected(it as Button, navController)
+                    onNavigationDestinationSelected(it as Button)
                 }
             }
         }
@@ -55,22 +55,21 @@ class HomeActivity2 : AppCompatActivity() {
 
     fun onNavigationDestinationSelected(
         button: Button,
-        navController: NavController,
-        position: Int = 0
     ): Boolean {
         val builder = NavOptions.Builder().setLaunchSingleTop(true).setRestoreState(true)
         val buttonId = resources.getResourceEntryName(button.id)
             if (buttonId == "btnHome") {
-//                builder.setPopUpTo(
-//                    navController.graph.findStartDestination().id,
-//                    inclusive = false,
-//                    saveState = true
-//                )
+                builder.setPopUpTo(
+                    navController.graph.findStartDestination().id,
+                    inclusive = true,
+                    saveState = false
+                )
             }
         val backStackEntry = navController.currentBackStack.value.map {
             resources.getResourceEntryName(it.destination.id)
         }
         if(backStackEntry.any { it == buttonId }){
+
         }
         Toast.makeText(this@HomeActivity2,"$backStackEntry",Toast.LENGTH_LONG).show()
         val options = builder.build()

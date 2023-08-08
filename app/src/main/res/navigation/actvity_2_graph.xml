@@ -26,6 +26,7 @@
         android:label="DevicesFragment"
         tools:layout="@layout/fragment_devices">
         <action
+            app:popUpToInclusive="true"
             android:id="@+id/action_btnDevice_to_deviceDetailsFragment2"
             app:destination="@id/deviceDetailsFragment2" />
     </fragment>

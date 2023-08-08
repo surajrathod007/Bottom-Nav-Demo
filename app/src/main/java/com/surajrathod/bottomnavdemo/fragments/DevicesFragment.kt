@@ -43,7 +43,7 @@ class DevicesFragment : Fragment() {
 
     private fun setupClicks() {
         binding.btnDeviceDetails.setOnClickListener {
-            findNavController().navigate(R.id.action_btnDevice_to_deviceDetailsFragment2)
+            findNavController().navigate(R.id.action_devicesFragment_to_deviceDetailsFragment)
         }
     }
 
